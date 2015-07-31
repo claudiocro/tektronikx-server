@@ -1,0 +1,6 @@
+[{"model": "TEK-OSX 01","name":"Tektroniks osx model 01", "start":1952, "last":1961,"page":2},
+{"model": "TEK-OSX 02","name":"Tektroniks osx model 02", "start":1952, "last":1955,"page":9},
+{"model": "AMS-TSK Z0","name":"Altitude mass sensor series z", "start":1952, "last":1955,"page":7},
+{"model": "AMS-BSK G7","name":"Altitude mass sensor series g", "start":1952, "last":1961,"page":2},
+{"model": "RAS Radeon","name":"Radeon RAS", "start":1958, "last":1961,"page":0},
+{"model": "Querz FMT", "start":1956, "last":1960,"page":1}]
