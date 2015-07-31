@@ -1,5 +1,5 @@
 {
-  "name": "Tektronix Metacatalog Server",
+  "name": "tektronix-metacatalog-server",
   "private": false,
   "version": "0.0.2",
   "description": "rest api server for tektronix-metacatalog-sane",
