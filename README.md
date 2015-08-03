@@ -1,4 +1,4 @@
-# Ember-bootstrap-datetimepicker [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-server.svg)](https://travis-ci.org/claudiocro/tektronix-metacatalog-server)
+# Tektroniks Metacatalog Server [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-server.svg)](https://travis-ci.org/claudiocro/tektronix-metacatalog-server)
 
 Tektronix Metacatalog Server
 
