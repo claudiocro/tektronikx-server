@@ -25,6 +25,7 @@
     "sails-generate-ember-blueprints": "0.0.9",
     "sails-hook-autoreload": "^0.11.5",
     "sails-mongo": "^0.11.2",
+    "sails-redis": "^0.10.4",
     "supertest": "^1.0.1"
   },
   "scripts": {
