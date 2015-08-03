@@ -10,6 +10,8 @@
  *
  */
 
+var redisConf= require("redis-url").parse(process.env.REDISTOGO_URL);
+
 module.exports = {
 
   /***************************************************************************
@@ -32,7 +34,11 @@ module.exports = {
 
   session: {
     adapter: 'redis',
-    collection: 'sails-sessions',
+    host: redisConf.host,
+    port: redisConf.port,
+    db: 'session',
+    pass: redisConf.password,
+    prefix: 'sess:'
   },
 
   filestore: {
@@ -47,7 +53,7 @@ module.exports = {
     authKeySecret: process.env.JWT_AUTHKEY_SECRET
   },
   blueprints: {
-    actions: false,
+    actions: true,
     rest:true,
     shortcuts: false
   },
