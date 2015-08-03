@@ -10,6 +10,8 @@
  *
  */
 
+var redisConf= require("redis-url").parse(process.env.REDISTOGO_URL);
+
 module.exports = {
 
   /***************************************************************************
@@ -26,13 +28,20 @@ module.exports = {
       url: process.env.MONGOLAB_URI
     },
     redis: {
-      url: process.env.REDISTOGO_URL
+      //url: process.env.REDISTOGO_URL,
+      host: redisConf.host,
+      port: redisConf.port,
+      db: redisConf.database,
     }
   },
 
   session: {
     adapter: 'redis',
-    collection: 'sails-sessions',
+    host: redisConf.host,
+    port: redisConf.port,
+    db: redisConf.database,
+    pass: redisConf.password,
+    prefix: 'sess:'
   },
 
   filestore: {
@@ -47,7 +56,7 @@ module.exports = {
     authKeySecret: process.env.JWT_AUTHKEY_SECRET
   },
   blueprints: {
-    actions: false,
+    actions: true,
     rest:true,
     shortcuts: false
   },
