@@ -29,7 +29,7 @@ module.exports = {
     },
     redis: {
       //url: process.env.REDISTOGO_URL,
-      host: redisConf.host,
+      host: redisConf.hostname,
       port: redisConf.port,
       db: redisConf.database,
     }
@@ -59,6 +59,13 @@ module.exports = {
     actions: true,
     rest:true,
     shortcuts: false
+  },
+
+  lightning: {
+    appKey:'tektronix-metacatalog-client',
+    host: redisConf.hostname,
+    port: redisConf.port,
+    pass: redisConf.password
   },
 
   /***************************************************************************
