@@ -2,16 +2,22 @@ sudo: false
 language: node_js
 cache:
   directories:
-    - node_modules
+  - node_modules
 notifications:
   email: false
 node_js:
-  - "0.10"
+- '0.10'
 before_install:
-  - npm i -g npm@^2.0.0
+- npm i -g npm@^2.0.0
 install:
-  - npm install
+- npm install
 script:
-  - npm test
+- npm test
 after_success:
-  - npm run semantic-release
+- npm run semantic-release
+deploy:
+  provider: heroku
+  api_key:
+    secure: eHWx1A0TnfOio9ZTP6+BM8IMuhpZtNZVWT/1QHtHe2BZa/bAECCk9yxIOxcdu1cTAIFa/+RI3KRNsz86+nN1jm+y29FHK7DsNPCvrH+UzphGa7QZakz+DReHbwxdXVfAwSRzKqa/jNkbaUCCckdjcg/tYgVCoiLQrwtgyUz8HgTMbZ33Kzdu/hVdFjO04u5vyw1FgtMp6Da6alCGKK3GsqCBe0K2nmB8NBzEd3uCcjygfeCsYx3Vuzxdd+zEODp60Wmpy0BvkjFb9K59WKj2kFd0wGC37IT+eY6Mu69zXWjfsA85thzYVMdDBPI0GHwhwXB2DhSzRoUqNQvxKO2MyhPa3S0byUtH2hoAbDSM7N1YhFVUhn7Hh+zEV5XarsUfQwxy12X9/WrbMUNjLB3qTHC9BHWzBgXVE9zBHjL9gdcaLdXyjM8u8aRDjA6JMc1MFof5QXz0bwY5z08N7Q4WmaAE1BerLgqQwufOXE4wbOWxutAQFR1hLfw+AZaZJVahMMlMr79lYOvJBzQkuPlJyM/8z5h1SdwzrRavWMiLvE8y5XiprYw4ymodAzi6f/z+e5qXaemtL1ZsveGGcFUzWhWsu0L9pgQxXRyZ9CYa9CxESQZ5tR1zO1UQrux+7F983VrQMCzGoPssSKTVoKC9TkC+dSc6whdCVG7UqX7A9Uw=
+  app: tektronix-metacatalog
+  on: master
