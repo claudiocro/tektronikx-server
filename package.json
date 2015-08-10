@@ -1,9 +1,10 @@
 {
   "name": "tektronix-metacatalog-server",
   "private": false,
-  "version": "0.0.2",
-  "description": "rest api server for tektronix-metacatalog-sane",
-  "keywords": [],
+  "description": "Tektronix Metacatalog SAILS Server",
+  "keywords": [
+    "sails"
+  ],
   "dependencies": {
     "aws-sdk": "^2.1.39",
     "barrels": "^1.5.0",
@@ -35,7 +36,8 @@
     "start": "node app.js",
     "debug": "node debug app.js",
     "test-w": "mocha -R spec --ui bdd --watch ./tests/**/*-test.js",
-    "test": "node tests/runner.js"
+    "test": "node tests/runner.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "main": "app.js",
   "engines": {
@@ -43,8 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/claudiocro/tektronix-metacatalog-server.git"
+    "url": "https://github.com/claudiocro/tektronix-metacatalog-server.git"
   },
-  "author": "claudiocro",
-  "license": "MIT"
+  "author": "claudiocro@gmail.com",
+  "homepage": "https://github.com/claudiocro/tektronix-metacatalog-server#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "semantic-release": "^4.0.3"
+  }
 }
