@@ -39,9 +39,18 @@ module.exports.bootstrap = function(cb) {
       ]).exec(function createModelhits(err, created){
         //if ( err ) return res.serverError( err );
 
-        console.log('created Modelhits: ' + created.length);
+        console.log('created Modelpages: ' + created.length);
 
-        cb();
+        Modelpage.create([
+          {model: '2',catalog:'1', page:9},
+          {model: '2',catalog:'2', page:9}
+        ]).exec(function createModelpages(err, created){
+          //if ( err ) return res.serverError( err );
+
+          console.log('created Modelpages: ' + created.length);
+
+          cb();
+        });
       });
 
     });
