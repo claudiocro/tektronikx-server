@@ -46,8 +46,8 @@ module.exports = {
 
   filestore: {
     adapter: 'aws-s3',
-    bucket: 'tektronix-metacatalog',
-    pages: 'pages'
+    bucket: 'p8builds',
+    pages: 'tektronix-metacatalog/pages'
   },
 
   jwt: {
