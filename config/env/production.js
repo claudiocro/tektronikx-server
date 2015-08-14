@@ -19,9 +19,9 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-   models: {
-     connection: 'mongo'
-   },
+  models: {
+    connection: 'mongo'
+  },
 
   connections: {
     mongo: {
@@ -39,7 +39,6 @@ module.exports = {
     adapter: 'redis',
     host: redisConf.host,
     port: redisConf.port,
-    db: redisConf.database,
     pass: redisConf.password,
     prefix: 'sess:'
   },
