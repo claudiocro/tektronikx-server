@@ -17,12 +17,26 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+  models: {
+    connection: 'mongo'
+  },
 
-  // policies: {
-  //   '*': false
-  // }
+  connections: {
+    mongo: {
+      host: 'db'
+    }
+  },
 
+  session: {
+    adapter: 'redis',
+    host: 'redis',
+    port: 6379,
+    prefix: 'sess:'
+  },
+
+   lightning: {
+     appKey:'tektronix-metacatalog-client',
+     host: 'redis',
+     port: 6379
+   }
 };
