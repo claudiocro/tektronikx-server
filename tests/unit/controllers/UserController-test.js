@@ -22,6 +22,15 @@ describe('Users', function() {
 
   describe('before a user is created', function() {
 
+    it ('should always set the userType to 0', function(done) {
+      User.beforeCreate({
+        userType: 3
+      }, function(err, user) {
+        expect(user.userType).to.equal(0);
+        done();
+      });
+    });
+
     it ('should hash the password', function(done) {
       User.beforeCreate({
         password: 'password'

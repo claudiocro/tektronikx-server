@@ -66,6 +66,10 @@ module.exports = {
     }
   },
   beforeCreate: function(user, cb) {
+    if(user.userType !== 0) {
+      user.userType = 0;
+    }
+
     bcrypt.genSalt(10, function(err, salt) {
       bcrypt.hash(user.password, salt, function(err, hash) {
         if (err) {

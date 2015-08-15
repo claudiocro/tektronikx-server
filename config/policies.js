@@ -7,7 +7,7 @@
  * its actions individually.
  *
  * Any policy file (e.g. `api/policies/authenticated.js`) can be accessed
- * below by its filename, minus the extension, (e.g. "authenticated")
+ * below by its filename, minus the extension, (e.g. 'authenticated")
  *
  * For more information on how policies work, see:
  * http://sailsjs.org/#/documentation/concepts/Policies
@@ -29,15 +29,27 @@ module.exports.policies = {
 
     '*': "hasToken",
     AppController: {
-      'serve': true
+      'serve': ['hasToken','isAdmin']
     },
     UserController: {
-      "create": true
+      'create': true,
+      'delete': ['hasToken','isAdmin'],
+      'edit': ['hasToken','isAdmin']
     },
     AuthController: {
       '*': true
     },
+    ModelhitController: {
+      '*': ['hasToken','isAdmin'],
+      'get': 'hasToken'
+    },
+    ModelpageController: {
+      '*': 'isadmin',
+      'get': 'hasToken'
+    },
     CatalogController: {
+      '*': ['hasToken','isAdmin'],
+      'get': 'hasToken',
       'image': 'authkey'
     }
 
