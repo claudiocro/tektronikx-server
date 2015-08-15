@@ -40,16 +40,23 @@ module.exports.policies = {
       '*': true
     },
     ModelhitController: {
-      '*': ['hasToken','isAdmin'],
-      'get': 'hasToken'
+      'get': 'hasToken',
+      'create': ['hasToken','isAdmin'],
+      'update': ['hasToken','isAdmin'],
+      'delete': ['hasToken','isAdmin']
     },
     ModelpageController: {
-      '*': 'isadmin',
-      'get': 'hasToken'
+      'get': 'hasToken',
+      'create': ['hasToken','isAdmin'],
+      'update': ['hasToken','isAdmin'],
+      'delete': ['hasToken','isAdmin'],
+      'image': 'authkey'
     },
     CatalogController: {
-      '*': ['hasToken','isAdmin'],
       'get': 'hasToken',
+      'create': ['hasToken','isAdmin'],
+      'update': ['hasToken','isAdmin'],
+      'delete': ['hasToken','isAdmin'],
       'image': 'authkey'
     }
 
