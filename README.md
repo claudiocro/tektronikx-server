@@ -1,4 +1,4 @@
-# Tektroniks Metacatalog Server [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-server.svg?branch=release)](https://travis-ci.org/claudiocro/tektronix-metacatalog-server?branch=release)
+# Tektronix Metacatalog Server [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-server.svg?branch=release)](https://travis-ci.org/claudiocro/tektronix-metacatalog-server?branch=release)
 
 Tektronix Metacatalog Server
 
