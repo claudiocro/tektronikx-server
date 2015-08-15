@@ -24,6 +24,7 @@ describe('Users', function() {
 
     it ('should always set the userType to 0', function(done) {
       User.beforeCreate({
+        password: 'password',
         userType: 3
       }, function(err, user) {
         expect(user.userType).to.equal(0);
