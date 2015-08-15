@@ -17,14 +17,14 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone https://github.com/claudiocro/tektronix-metacatalog-server.git` this repository
-* change into the new directory
+* `cd tektronix-metacatalog-server` change into the new directory
 * `npm install`
 
 ## Running / Development
 
-* `sails lift`
-* `node --debug app.js` (debug)
-* `node-inspector --save-live-edit` (start node-instector)
+`sails lift`
+or
+`node-debug app.js` (debug)
 
 API is served at: `http://localhost:1337/api/v1/`
 
@@ -33,10 +33,11 @@ API is served at: `http://localhost:1337/api/v1/`
 Make shure destination directory exists
 `convert file.pdf dir/image.png`
 
-### Release
+### Release / Deploy
 
-This app follows the `semantc-release`
-* `commit` to master branch
+This app uses `semantc-release` to handle versioning and release.
+A `commit` to master branch will trigger Travic-CI and if all tests are green a release will be published and the new version will be deployed to heroku.
+
 
 ## Further Reading / Useful Links
 
