@@ -29,7 +29,7 @@ module.exports = {
       s3.getSignedUrl('getObject', params, function (err, url) {
         if ( err ) return res.serverError( err );
 
-        res.redirect(url)
+        res.redirect(url);
       });
 
     }
