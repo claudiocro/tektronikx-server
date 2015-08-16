@@ -61,6 +61,7 @@ module.exports = {
       var obj = this.toObject();
       // Remove the password object value
       delete obj.password;
+      obj.isAdmin = this.isAdmin();
       // return the new object without password
       return obj;
     }
