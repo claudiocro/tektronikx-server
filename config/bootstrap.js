@@ -16,8 +16,9 @@ module.exports.bootstrap = function(cb) {
     User.create([
       {firstName: 'Claudio', lastName: 'Romano', email:'claudiocro@gmail.com', password: '12345678'}
     ]).exec(function createUsers(err, cusers){
-      User.update(cusers, {userType: 3}).exec(function() {
-        console.log('User created!');
+      User.update({id: cusers[0].id}, {userType: 3}).exec(function(err, acreated) {
+        if(err) {console.log(err)}
+        console.log('User created!', acreated);
       });
 
       Catalog.create([
