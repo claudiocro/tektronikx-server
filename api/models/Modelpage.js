@@ -13,7 +13,8 @@ module.exports = {
 
     catalog : { model: 'catalog' },
 
-    page : { type: 'integer' }
+    page : { type: 'integer' },
+
+    pagecount : { type: 'integer' }
   }
 };
-
