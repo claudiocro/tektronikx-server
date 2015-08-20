@@ -11,7 +11,7 @@ module.exports = {
   image: function image(req, res) {
 
     if(sails.config.filestore.adapter === 'disk') {
-      var emberApp = __dirname + '/../../' + req._sails.config.filestore.path + '/'+req.param('catalog') +'/page-'+req.param('page') + '.png';
+      var emberApp = __dirname + '/../../' + req._sails.config.filestore.path + '/'+req.param('catalog') +'/page-'+req.param('page') + '.jpg';
       fs.exists(emberApp, function (exists) {
         if (!exists) {
           return res.notFound('The requested file does not exist.');
@@ -25,7 +25,7 @@ module.exports = {
       var fsconfig = sails.config.filestore;
       var params = {
         Bucket: fsconfig.bucket,
-        Key: fsconfig.pages+'/'+req.param('catalog') +'/page-'+req.param('page') + '.png'};
+        Key: fsconfig.pages+'/'+req.param('catalog') +'/page-'+req.param('page') + '.jpg'};
       s3.getSignedUrl('getObject', params, function (err, url) {
         if ( err ) return res.serverError( err );
 
