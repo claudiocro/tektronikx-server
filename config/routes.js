@@ -46,7 +46,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'GET /pages/:catalog/:page.png': 'CatalogController.image',
+  'GET /pages/:catalog/:page.jpg': 'CatalogController.image',
 
   'GET /test/insert/data': 'TestController.insertTestData',
 
